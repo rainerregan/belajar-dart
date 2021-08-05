@@ -35,7 +35,7 @@ void main(){
     List<String> new_names = ['John', 'Mario', 'David'];
 
     /** Instantiating Class */
-    User user_one = User();
+    User user_one = User('Luigi', 23);
     print(user_one.username);
     print(user_one.age);
     user_one.login();
@@ -57,10 +57,17 @@ int getNumber() => 311;
 
 /** Class */
 class User{
-    String username = "mario";
-    int age = 25;
+  String username = "";
+  int age = 0;
 
-    void login(){
-        print('User logged in');
-    }
+  /** Constructor */
+  User(String username, int age){
+    this.username = username;
+    this.age = age;
+  }
+
+  /** Function */
+  void login(){
+    print('User logged in');
+  }
 }
