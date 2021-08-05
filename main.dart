@@ -39,6 +39,11 @@ void main(){
     print(user_one.username);
     print(user_one.age);
     user_one.login();
+
+    SuperUser userTwo = SuperUser('Bro', 20);
+    print(userTwo.username);
+    userTwo.publish();
+    userTwo.login();
 }
 
 /** Function that returns String */
@@ -69,5 +74,16 @@ class User{
   /** Function */
   void login(){
     print('User logged in');
+  }
+}
+
+/** Extends Class */
+class SuperUser extends User{
+
+  /** Super constructor */
+  SuperUser(String username, int age) : super(username, age);
+
+  void publish(){
+    print('Published');
   }
 }
